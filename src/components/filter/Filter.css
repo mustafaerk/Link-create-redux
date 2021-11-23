@@ -1,0 +1,11 @@
+.filter__select {
+  width: 300px;
+  border: 1px solid #946767;
+  outline: none;
+  background: transparent;
+  border-radius: 0;
+  display: block;
+  padding: 12px 55px 15px 15px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
