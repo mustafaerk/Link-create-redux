@@ -46,7 +46,7 @@ const List = () => {
 
 
     const handleVoting = ({ id, change }) => {
-        dispatch(changeProductPoint({ id, change }))
+        dispatch(changeProductPoint({ id, change, callback: () => handleSortList() }))
     }
 
     const handlePageIndexChange = pageIndex => {

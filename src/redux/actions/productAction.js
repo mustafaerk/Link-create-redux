@@ -1,14 +1,15 @@
 import { ActionTypes } from "../../constants/actionTypes";
 
 
-export const changeProductPoint = ({ id, change }) => async (dispatch, getState) => {
+export const changeProductPoint = ({ id, change, callback }) => async (dispatch, getState) => {
     let { productList } = getState().product
     const productIndex = productList.findIndex(product => product.id === id)
     productList[productIndex].point += change
-    dispatch({
+    await dispatch({
         type: ActionTypes.VOTE_POINT_CHANGE,
         payload: productList
     })
+    callback();
 }
 
 export const deleteItemFromList = ({ id, callback }) => async (dispatch, getState) => {
